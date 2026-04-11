@@ -121,7 +121,7 @@ if(bossHealth <= 0) {
     console.log ("you lost")
  }
 
-let takePotion = propmt("do you want to take the potion? (yes/no):");
+let takePotion = prompt("do you want to take the potion? (yes/no):");
 if (takePotion === "yes") {
     hasPotion = true;
     console.log ("you pick up the potion...");
