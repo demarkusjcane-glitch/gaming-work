@@ -41,7 +41,8 @@ if (enterCave === "yes") {
             playerHealth = playerHealth - 5;
         }
         console.log("Your health is now: " + playerHealth);
-    }}
+    // } compare code on local with github
+    }
     {
         let takeCharm = prompt("You find a charm. Take it? (yes/no): ");
         if (takeCharm === "yes") {
@@ -52,7 +53,7 @@ if (enterCave === "yes") {
     }
 
 
-}
+}}
 
 let hasDoor = prompt("You find a strange door. Try to open it? (yes/no): ");
 
@@ -79,11 +80,12 @@ if (hasDoor === "yes") {
 }
 
 
-let takeArmor = prompt("you see a lit stand at the end of the dark room. The item on top seems to be rare and valuable. However, the armor stands seem to twitch with life. do you go after it? (yes/no)");
+console.log("you see a lit stand at the end of the dark room. The item on top seems to be rare and valuable.");
+let takeArmor = prompt("However, the armor stands seem to twitch with life. do you go after it? (yes/no)");
    if (takeArmor === "yes") {
-    console.log("you walk in but the walls have massive spider webs on them.")
+    console.log("you walk in but the walls have massive spider webs on them.");
    } else {
-    console.log("you run out of the room.")
+    console.log("you run out of the room.");
    }
 
 
@@ -111,9 +113,21 @@ if (fightBoss === "yes") {
         playerHealth -= bossDamage;
         console.log ("the giant spider attacked you for" + bossDamage + "damage.");
         console.log ("your health" + playerHealth);
+        
+
+     } else if (action === "run") {
+        console.log ("you ran away from the room.");
+        break;
+        
+        } else {
+            console.log ("invaild action");
         }
-    }
 }
+
+} else {
+    console.log ("you did not take the rare item or fight the boss.");
+}
+
 if(bossHealth <= 0) {
     console.log ("you win");
 }
