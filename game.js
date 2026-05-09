@@ -104,14 +104,14 @@ if (fightBoss === "yes") {
         if (attack === "yes") {
         let playerDamage = getDamage();
             bossHealth -= playerDamage;
-            console.log ("you attacked boss for" + playerDamage + "damage.");
+            console.log ("you attacked boss for " + playerDamage + " damage.");
             console.log ("boss health:" + bossHealth);
             if(bossHealth <= 0) {
                 break;
             }
         let bossDamage = getDamage();
         playerHealth -= bossDamage;
-        console.log ("the giant spider attacked you for" + bossDamage + "damage.");
+        console.log ("the giant spider attacked you for " + bossDamage + " damage.");
         console.log ("your health" + playerHealth);
         
 
