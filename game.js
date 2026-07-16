@@ -5,6 +5,12 @@ let hasSword = false;
 let hasPotion = false;
 let playerHealth = 20;
 
+function checkHealth () {
+    if (playerHealth <=0) {
+        alert ("you lost and died. reset game.");
+        resetGame ();
+    }
+}
 
 console.log("You are walking through a dark forest...");
 
