@@ -76,7 +76,14 @@ if (hasDoor === "yes") {
 
 
 } else {
-    console.log("You walk away.");
+    console.log("You walk away and you see the exit of the cave.");
+
+let exitCave = prompt ("exit the cave? (yes/no) ");
+
+if (exitCave === "yes") {
+    console.log ("you walk out of the cave and find yourself in a fairy forest.");
+} else {
+    console.log ("you step outside anyway and find yourself in a fairy forest.");
 }
 
 
@@ -109,21 +116,24 @@ if (fightBoss === "yes") {
             if(bossHealth <= 0) {
                 break;
             }
+          } else if (action === "run") {
+            console.log ("you escaped!");
+        } else {
+            console.log ("invaild action");
+        }
         let bossDamage = getDamage();
         playerHealth -= bossDamage;
         console.log ("the giant spider attacked you for " + bossDamage + " damage.");
         console.log ("your health" + playerHealth);
-        
+    }
 
-     } else if (action === "run") {
-        console.log ("you ran away from the room.");
-        break;
+     {
         
+        } else if (action === "run") {
+            console.log ("you escaped!");
         } else {
             console.log ("invaild action");
         }
-}
-
 } else {
     console.log ("you did not take the rare item or fight the boss.");
 }
@@ -132,11 +142,17 @@ if(bossHealth <= 0) {
     console.log ("you win");
 }
  if(playerHealth <=0) {
-    console.log ("you lost")
+    console.log ("you lost and died.")
+     if(playerHealth <=0) {
+        console.log ("restarting the game.")
+     }
+ } else if (action === "run") {
+        console.log ("you ran away from the room.");
+        break;
  }
 
 let takePotion = prompt("do you want to take the potion? (yes/no):");
-if (takePotion === "yes") {
+if (takePotion === "yes")
     hasPotion = true;
     console.log ("you pick up the potion...");
 }
