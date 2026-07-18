@@ -45,6 +45,8 @@ if (enterCave === "yes") {
         } else {
             console.log("You got hurt!");
             playerHealth = playerHealth - 5;
+            }
+        checkHealth(); 
         }
         console.log("Your health is now: " + playerHealth);
     // } compare code on local with github
@@ -59,7 +61,7 @@ if (enterCave === "yes") {
     }
 
 
-}}
+}
 
 let hasDoor = prompt("You find a strange door. Try to open it? (yes/no): ");
 
@@ -144,32 +146,34 @@ if (fightBoss === "yes") {
 if(bossHealth <= 0) {
     console.log ("you win");
 }
- if(playerHealth <=0) {
-    console.log ("you lost and died.")
-     if(playerHealth <=0) {
-        console.log ("restarting the game.")
-     }
- } else if (action === "run") {
+
+else checkHealth();
+
+if (action === "run") {
         console.log ("you ran away from the room.");
         break;
+
  }
 
-let takePotion = prompt("do you want to take the potion? (yes/no):");
+let takePotion = prompt("Do you want to take the potion? (yes/no):");
 if (takePotion === "yes")
     hasPotion = true;
-    console.log ("you pick up the potion...");
+    console.log ("You pick up the potion...");
+
 function usePotion () {
     let effect = Math.random();
-}
+} 
     if (effect<0.5 ) {
         let heal= Math.floor(Math.random()*6)+3;
         playerHealth += heal;
-        console.log ("you gained" + heal +"lives");
+        console.log ("You gained " + heal + "lives");
     } else {
         let damage= Math.floor(Math.random()*6)+3;
         playerHealth -= damage;
-        console.log ("you lost" + damage + "Lives")
+        console.log ("You lost " + damage + " Lives");
+        checkHealth();
     }
+    usePotion(); 
 }
 
 
