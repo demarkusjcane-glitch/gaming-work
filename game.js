@@ -51,7 +51,8 @@ if (enterCave === "yes") {
         console.log("Your health is now: " + playerHealth);
     // } compare code on local with github
     }
-    {
+
+    
         let takeCharm = prompt("You find a charm. Take it? (yes/no): ");
         if (takeCharm === "yes") {
         hasCharm = true;
@@ -61,7 +62,7 @@ if (enterCave === "yes") {
     }
 
 
-}
+
 
 let hasDoor = prompt("You find a strange door. Try to open it? (yes/no): ");
 
