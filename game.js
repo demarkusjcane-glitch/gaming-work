@@ -7,7 +7,7 @@ let playerHealth = 20;
 
 function checkHealth () {
     if (playerHealth <=0) {
-        alert ("you lost and died. reset game.");
+        console.log ("you lost and died. reset game.");
         resetGame ();
     }
 }
@@ -119,7 +119,7 @@ if (fightBoss === "yes") {
         if (attack === "yes") {
         let playerDamage = getDamage();
             bossHealth -= playerDamage;
-            console.log ("you attacked boss for " + playerDamage + " damage.");
+            console.log ("you attacked boss for " + playerDamage + " " + " damage.");
             console.log ("boss health:" + bossHealth);
             if(bossHealth <= 0) {
                 break;
@@ -131,8 +131,8 @@ if (fightBoss === "yes") {
         }
         let bossDamage = getDamage();
         playerHealth -= bossDamage;
-        console.log ("the giant spider attacked you for " + bossDamage + " damage.");
-        console.log ("your health" + playerHealth);
+        console.log ("the giant spider attacked you for " + bossDamage + " " + " damage.");
+        console.log ("your health " + playerHealth);
     }
      
         } else if (action === "run") {
