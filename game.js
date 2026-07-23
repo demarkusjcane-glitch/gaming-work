@@ -175,7 +175,7 @@ function usePotion () {
     }
     usePotion(); 
 }
-
+console.log ("6676766766")
 
 // After cave with fighting the boss leads to same place as leading out back of cave. 
 // Leads to forest staying in forest for duration, fighting 3 bandits. 
